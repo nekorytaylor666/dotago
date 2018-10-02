@@ -1,0 +1,65 @@
+.hero_icon {
+}
+
+.hero_name {
+  margin-top: 30px;
+}
+
+.hero_name > h1 {
+  font-size: 100px;
+}
+
+.hero_description > p {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #757575;
+  font-size: 25px;
+}
+
+.list-group-item {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  background: none;
+  font-size: 20px;
+  border: 1px solid #fff;
+}
+
+.list-group-item:first-of-type {
+  border-top: 0;
+}
+
+.list-group-item::before {
+  content: "";
+  margin-right: 25px;
+  width: 40px;
+  height: 40px;
+}
+
+.ability_strength::before {
+  content: url(../attributes-icons/Strength_attribute_symbol.png);
+}
+
+.ability_agility::before {
+  content: url(../attributes-icons/Agility_attribute_symbol.png);
+}
+
+.ability_intel::before {
+  content: url(../attributes-icons/Intelligence_attribute_symbol.png);
+}
+
+.attack::before {
+  content: url(../attributes-icons/attack.png);
+}
+
+.armor::before {
+  content: url(../attributes-icons/armor_icon.png);
+}
+
+.speed::before {
+  content: url(../attributes-icons/speed.png);
+}
+
+.hero_icon {
+  margin-bottom: 10px;
+}

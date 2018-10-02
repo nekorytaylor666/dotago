@@ -1,0 +1,56 @@
+{% extends "layout.html" %} {% load static %}
+
+<!-- <div class='col-sm-6 col-sm-offset-3'>
+    <h1> {{hero.name}}
+        <br/>
+        <small> {{instance.area}}</small>
+    </h1>
+    {% if instance.image %}
+    <img src="{{instance.image.url}}" class='img-responsive' alt="image-{{instance.title}}" height="600" width="800" /> {% endif %} {{instance.description | linebreaks}}
+    <br/> {%if instance.salary == 0 %}Зарплата договорная 
+    {% else %}{{instance.salary}} {{instance.currency}}{% endif %}
+    <br/>
+    <br/>
+    {% if instance.lat != 0%}
+    
+    {% endif %}
+    <a href="https://www.facebook.com/sharer/sharer.php?u= {{request.build_absolute_uri}}">
+        Share on Facebook
+    </a>
+    <a href="https://twitter.com/home?status=I'm%20going%20to%20learn%20to%20Code...%20Come%20build%20an%20web%20apsp%20with%20me!%20%23CFE%20and%20@justinmitchel%20 {{request.build_absolute_uri}}">
+        Share on Twitter
+    </a>
+    <a href='https://plus.google.com/share?url= {{request.build_absolute_uri}}'>Share on Google+</a>
+    
+</div> -->
+{% block content%}
+
+<div class="hero_name">
+    <h1>{{hero.name}}</h1>
+</div>
+<div class="row">
+    <div class="col-md-6 hero_description row justify-content-between">
+        <p>{{hero.hero_description}}</p>
+    </div>
+    <div class="col-md-6 col-md-offset-6">
+        <div class="hero_icon">
+            <img src="{% static "hero-icons/" %}{{hero.hero_icon}}" alt="{{hero.name}}" class="rounded">
+        </div>
+        <ul class="list-group list-group-flush">
+            <!-- basic_stren = models.IntegerField()
+        basic_agil = models.IntegerField()
+        basic_intel = models.IntegerField() -->
+
+            <!-- stren_gain = models.FloatField()
+        agil_gain = models.FloatField()
+        intel_gain = models.FloatField() -->
+            <li class="list-group-item ability_strength">{{hero.basic_stren}}+{{hero.stren_gain}}</li>
+            <li class="list-group-item ability_agility">{{hero.basic_agil}}+{{hero.agil_gain}}</li>
+            <li class="list-group-item ability_intel">{{hero.basic_intel}}+{{hero.intel_gain}}</li>
+            <li class="list-group-item attack">{{hero.damage}}</li>
+            <li class="list-group-item armor">{{hero.armor}}</li>
+            <li class="list-group-item speed">{{hero.speed}}</li>
+        </ul>
+    </div>
+</div>
+{% endblock content %}

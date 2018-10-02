@@ -1,0 +1,15 @@
+.heroes__item {
+  position: relative;
+}
+
+.heroes__name {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 2rem;
+  font-size: 20px;
+  color: #fff;
+}
+
+.heroes__image {
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.4);
+}

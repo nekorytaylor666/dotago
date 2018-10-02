@@ -1,0 +1,21 @@
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #000;
+  background-image: url(../bg.png);
+  background-size: cover;
+  background-position: center;
+
+  color: #fff;
+}
+
+header {
+  margin: 10px;
+}
+
+.site-logo {
+  margin: auto;
+  width: 100px;
+}
