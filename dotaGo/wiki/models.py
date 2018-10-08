@@ -31,7 +31,12 @@ class Hero(models.Model):
     def __str__(self):
         return self.name
 
-
+class Abilities(models.Model):
+    name = models.CharField(max_length = 100)
+    description = models.TextField(default='Призывает фантома, который летит к выбранной цели и сжимает её в своих объятьях, \nнанося периодический урон и запрещая применять способности. Если фантом продержится на жертве до конца действия,\n он нанесёт ей большой урон от разрыва и вернётся к владельцу, а время перезарядки способности сбросится.\nОдна геройская атака по фантому считается за три обычных.')
+    hero = models.ForeignKey(Hero,  on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
 
 
 
