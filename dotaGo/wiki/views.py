@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Hero
+from .models import Hero,Item
 from django.db.models import Q
 import os 
 import glob
@@ -13,7 +13,8 @@ def list_heroes(request):
         "images" : images,
         "heroes" : heroes
     }
-    return render(request, "index.html", context)
+    
+    return render(request, "hero_list.html", context)
 
 def get_heroes_images():
     directory = "static/hero-icons/"
@@ -37,3 +38,12 @@ def heroes_images_fill():
         new_hero = Hero(name = name, hero_icon = icon)
         new_hero.save()
         # print(name)
+
+def items_list(request):
+    items = Item.objects.all()
+    context = {
+        "items" : items
+    }
+    return render(request, "items_list.html", context)
+    
+

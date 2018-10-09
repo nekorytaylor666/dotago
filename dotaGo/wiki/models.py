@@ -35,10 +35,18 @@ class Abilities(models.Model):
     name = models.CharField(max_length = 100)
     description = models.TextField(default='Призывает фантома, который летит к выбранной цели и сжимает её в своих объятьях, \nнанося периодический урон и запрещая применять способности. Если фантом продержится на жертве до конца действия,\n он нанесёт ей большой урон от разрыва и вернётся к владельцу, а время перезарядки способности сбросится.\nОдна геройская атака по фантому считается за три обычных.')
     hero = models.ForeignKey(Hero,  on_delete=models.CASCADE)
+
     def __str__(self):
         return self.name
 
-
+class Item(models.Model):
+    name = models.CharField(max_length = 100)
+    hero_icon = models.CharField(max_length = 100, default = "Eul's_Scepter_of_Divinity_icon.png")
+    description = models.TextField(default='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt quam ut justo tristique laoreet. Mauris vel orci porttitor, vehicula risus eu, posuere arcu. Nulla facilisi. Sed malesuada augue id orci ullamcorper aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis ante sed nisi sagittis, a venenatis justo rhoncus. Pellentesque at mauris quis tortor scelerisque gravida eget et velit. Aliquam erat volutpat. Duis varius neque sapien, nec tincidunt mauris molestie et. Nunc feugiat nibh vitae tortor facilisis efficitur. Proin ut venenatis lectus. Ut id imperdiet ligula, eu luctus turpis.') 
+    price = models.IntegerField(default=0)
+    
+    def __str__(self):
+        return self.name
 
   
 
