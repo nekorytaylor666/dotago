@@ -3,7 +3,7 @@
 {% block content %}
 <section class="heroes justify-content-center row">
     {% for obj in items %}
-    <div class="items__item mb-1 col-4 col-md-1">
+    <div class="items__item mb-3 col-4 col-md-1">
         <a href="{% url 'detail' id=obj.id %}">
             <img src="{% static "items-icons/complex/" %}{{obj.hero_icon}}" alt="{{obj.name}}" class="heroes__image rounded" >
             <div class="item__name">{{obj.name}}</div>
