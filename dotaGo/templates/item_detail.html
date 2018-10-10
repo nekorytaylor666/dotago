@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% load static %}
+{% block content%}
+
+<div class="hero_name">
+    <h1>{{item.name}}</h1>
+</div>
+<div class="col-md-6 col-md-offset-6">  
+    <div class="hero_icon">
+        <img src="{% static "items-icons/complex/" %}{{item.hero_icon}}" alt="{{item.name}}" class="rounded">
+        <h2>price: {{item.price}}</h2>
+    </div>
+</div>
+    <div class="col-md-6 hero_description row justify-content-between">
+        <p>{{item.description}}</p>
+    </div>
+</div>
+{% endblock content %}

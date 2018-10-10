@@ -31,6 +31,15 @@ def hero_detail(request, id=None):
 
     return render(request, "hero_detail.html", context_data)
 
+        
+def item_detail(request, id=None):
+    instance = get_object_or_404(Item, id=id)
+    context_data = {
+        "item": instance,
+    }
+
+    return render(request, "item_detail.html", context_data)
+
 def heroes_images_fill():
     directory = "static/hero-icons/"
     for icon in os.listdir(directory):
