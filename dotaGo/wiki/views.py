@@ -8,9 +8,7 @@ import glob
 
 def list_heroes(request):
     heroes = Hero.objects.all()
-    images = get_heroes_images()
     context = {
-        "images" : images,
         "heroes" : heroes
     }
     
@@ -47,6 +45,13 @@ def heroes_images_fill():
         new_hero = Hero(name = name, hero_icon = icon)
         new_hero.save()
         # print(name)
+
+def items_images_fill():
+    directory = "static/items-icons/complex/"
+    for icon in os.listdir(directory):
+        name = icon.replace('_icon.png','').replace('_',' ')
+        new_item = Item(name = name, hero_icon = icon)
+        new_item.save()
 
 def items_list(request):
     items = Item.objects.all()

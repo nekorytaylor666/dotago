@@ -1,0 +1,13 @@
+.show-simple-stats
+{  
+    border-width: 0;
+    background-color: whitesmoke;
+    color: black;
+    width: 80%;
+    height: 80%;
+} 
+
+.show-simple-stats:hover{
+    font-size: 50px;
+    transition: 1s;
+}

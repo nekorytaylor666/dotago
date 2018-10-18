@@ -1,6 +1,22 @@
 {% extends 'layout.html' %}
 {% load static %}
 {% block content %}
+<header class="row align-items-center">
+    <a class="site-logo" href="{% url 'list_heroes' %}">
+        <img  src="{% static 'dota_logo.png' %}" alt="logo">
+    </a>
+    <div class="col-md-4">
+        <button class="show-simple-stats">
+            heroes
+        </button>
+    </div>
+    <div class="col-md-4">
+        <button class="show-simple-stats">
+            heroes
+        </button>
+    </div>
+</header>  
+
 <section class="heroes justify-content-center row">
     {% for obj in heroes %}
     <div class="heroes__item mb-3 col-4 col-md-2">
